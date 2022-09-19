@@ -1,0 +1,21 @@
+syntax = "proto3";
+package decimal.multisig.v1;
+
+import "gogoproto/gogo.proto";
+import "decimal/multisig/v1/multisig.proto";
+
+option go_package = "bitbucket.org/decimalteam/go-smart-node/x/multisig/types";
+
+message GenesisState {
+  // registered multisig wallets
+  repeated Wallet wallets = 1 [
+    (gogoproto.jsontag) = "wallets",
+    (gogoproto.moretags) = "yaml:\"wallets\"",
+    (gogoproto.nullable) = false
+  ];
+  repeated Transaction transactions = 2 [
+    (gogoproto.jsontag) = "transactions",
+    (gogoproto.moretags) = "yaml:\"transactions\"",
+    (gogoproto.nullable) = false
+  ];
+}
