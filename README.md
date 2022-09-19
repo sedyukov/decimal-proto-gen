@@ -11,3 +11,6 @@
 ### Run generation script
 #### scripts/protocgen.sh
 
+### If you have problems with buf, when downoading
+##### You should have turned on VPN
+##### And in some cases add flag to docker run --network=host
